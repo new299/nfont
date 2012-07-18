@@ -5,3 +5,5 @@ header based sdl font library - BSD/GPL dual licensed.
 
 The font is stored in a png file and easily edited, currently supports lower 128 ASCII characters.
 The png file is compressed down to 2bits per pixel, greyscale. This reduces the font storage requirements to around 4k, making the nfont suitable for use in embedded systems.
+
+nfont currently uses Ubuntu monospaced by default, this can easily be changed. I'm interested in adding full unicode support. If this would be useful to you let me know: new at sgenomics dot co dot uk.
