@@ -5,7 +5,7 @@
 using namespace std;
 #include "nfont.h"
 
-int main() {
+int main(int argc, char **argv) {
 
   SDL_Surface *screen;
  
@@ -25,7 +25,10 @@ int main() {
     SDL_Flip(screen);
     SDL_LockSurface(screen);
 
-    draw_text(screen,rand()%500,rand()%500,"Hello World!",0);
+    string hello = "Hello World!";
+    uint32_t highlight = rand()%2;
+    if(highlight == 1) highlight=-1;
+    draw_text(screen,rand()%500,rand()%500,hello.c_str(),highlight);
 
     SDL_UnlockSurface(screen);
   }
